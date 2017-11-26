@@ -53,6 +53,7 @@ public class SpringBootController
 	{
 		ResponseEntity<?> responseEntity = null ;
 		
+		// As I do not have a DDBB, I have created an example of customer to test if Id is already saved or not
 		if (this.validCustomerId(id))
 		{
 			Customer customer = new Customer() ;
@@ -67,7 +68,7 @@ public class SpringBootController
 			
 			customer.setProperties(properties);
 			
-			responseEntity = ResponseEntity.ok().body(customer) ;
+			responseEntity = ResponseEntity.status(200).body(customer) ;
 		}
 		else
 		{
