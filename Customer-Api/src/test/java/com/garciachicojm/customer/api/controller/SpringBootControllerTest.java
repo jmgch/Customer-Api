@@ -17,10 +17,12 @@ import com.garciachicojm.customer.api.model.Properties;
 @SpringBootTest(
 		classes = Launcher.class,
 		webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class SpringBootControllerTest {
+public class SpringBootControllerTest
+{
 	
 	@Test
-	public void include_new_valid_customer(){
+	public void include_new_valid_customer()
+	{
 		Customer customer = new Customer();
 		customer.setId(5);
 		customer.setFirst_name("Jose");
@@ -40,7 +42,8 @@ public class SpringBootControllerTest {
 	}
 	
 	@Test
-	public void include_new_customer_wrong_id(){
+	public void include_new_customer_wrong_id()
+	{
 		Customer customer = new Customer();
 		customer.setFirst_name("Jose");
 		customer.setLast_name("Garcia");
@@ -60,7 +63,8 @@ public class SpringBootControllerTest {
 	}
 	
 	@Test
-	public void include_new_customer_wrong_first_name(){
+	public void include_new_customer_wrong_first_name()
+	{
 		Customer customer = new Customer();
 		customer.setId(1);
 		customer.setFirst_name("");
@@ -81,7 +85,8 @@ public class SpringBootControllerTest {
 	}
 	
 	@Test
-	public void include_new_customer_wrong_last_name(){
+	public void include_new_customer_wrong_last_name()
+	{
 		Customer customer = new Customer();
 		customer.setId(1);
 		customer.setFirst_name("Jose");

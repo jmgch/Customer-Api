@@ -25,7 +25,8 @@ public class CucumberControllerTest
 	}
 	 
 	@Then("^the client receives status code of (\\d+)$")
-	public void the_client_receives_status_code_of(int statusCode) throws Throwable {
+	public void the_client_receives_status_code_of(int statusCode) throws Throwable
+	{
 		Assert.assertEquals(statusCode, this.response.getStatusCode().value());
 	}
 }
