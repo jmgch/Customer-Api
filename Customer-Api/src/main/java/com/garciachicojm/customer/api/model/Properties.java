@@ -2,7 +2,7 @@ package com.garciachicojm.customer.api.model;
 
 public class Properties
 {
-	private int age ;
+	private Integer age ;
 	
 	private boolean active ;
 	
@@ -13,12 +13,12 @@ public class Properties
 		super() ;
 	}
 
-	public int getAge()
+	public Integer getAge()
 	{
 		return this.age;
 	}
 
-	public void setAge(int age)
+	public void setAge(Integer age)
 	{
 		this.age = age;
 	}

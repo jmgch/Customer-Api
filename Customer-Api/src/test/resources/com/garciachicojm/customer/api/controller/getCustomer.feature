@@ -1,8 +1,13 @@
-Feature: the customer is returned
-	Scenario: client makes call to GET /rest/api/customer/1
-		When the client calls /rest/api/customer/1
-		Then the client receives status code of 200 
-		
-	Scenario: client makes call to GET /rest/api/customer/2
-		When the client calls /rest/api/customer/2
-		Then the client receives status code of 404
+@GetCustomer
+Feature: Feature to get customer information
+
+  Scenario Outline: user makes call to GET /rest/api/customer/<id>
+    When the user calls /rest/api/customer/<id>
+    Then the user receives status code of <status>
+
+    Examples: 
+      | id | status |
+      | -1 |    404 |
+      |  0 |    404 |
+      |  1 |    200 |
+      |  2 |    404 |
